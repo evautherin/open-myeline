@@ -7,7 +7,6 @@
 
 import Foundation
 import ActivityKit
-import CoreLocation
 
 final class LiveActivityManager {
     static let shared = LiveActivityManager()
@@ -38,15 +37,13 @@ final class LiveActivityManager {
         // Start an async Task to process location updates.
         locationTask = Task {
             do {
-                for try await update in CLLocationUpdate.liveUpdates() {
-                    // Extract the optional location.
-                    let location = try update.location
-                    let latitude = location?.coordinate.latitude
-                    let longitude = location?.coordinate.longitude
-                    
+                for try await contentState in LocationActivityAttributes.ContentState.updates {
                     // Prepare the updated content.
-                    let newState = LocationActivityAttributes.ContentState(latitude: latitude, longitude: longitude)
-                    let updatedContent = ActivityContent(state: newState, staleDate: nil, relevanceScore: 0.0)
+                    let updatedContent = ActivityContent(
+                        state: contentState,
+                        staleDate: nil,
+                        relevanceScore: 0.0
+                    )
                     
                     // Update the Live Activity.
                     await activity?.update(updatedContent)
