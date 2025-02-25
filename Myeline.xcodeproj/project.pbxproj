@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F319FFA2D6CB3CF00517784 /* SwiftLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 8F319FF92D6CB3CF00517784 /* SwiftLocation */; };
+		8F319FFC2D6CB3F400517784 /* SwiftLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 8F319FFB2D6CB3F400517784 /* SwiftLocation */; };
 		8FCBEC5E2D6627AE00DAB966 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCBEC5D2D6627AE00DAB966 /* WidgetKit.framework */; };
 		8FCBEC602D6627AE00DAB966 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCBEC5F2D6627AE00DAB966 /* SwiftUI.framework */; };
 		8FCBEC6D2D6627B000DAB966 /* LocationActivityExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8FCBEC5B2D6627AE00DAB966 /* LocationActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -44,7 +46,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		8FCBEC562D6625C300DAB966 /* Exceptions for "Myeline" folder in "Myeline" target */ = {
+		8FBBA8452D6CA7F9004BCD5B /* Exceptions for "Myeline" folder in "Myeline" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -74,7 +76,7 @@
 		8FCBEC462D66258300DAB966 /* Myeline */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				8FCBEC562D6625C300DAB966 /* Exceptions for "Myeline" folder in "Myeline" target */,
+				8FBBA8452D6CA7F9004BCD5B /* Exceptions for "Myeline" folder in "Myeline" target */,
 			);
 			path = Myeline;
 			sourceTree = "<group>";
@@ -102,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F319FFA2D6CB3CF00517784 /* SwiftLocation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FCBEC602D6627AE00DAB966 /* SwiftUI.framework in Frameworks */,
+				8F319FFC2D6CB3F400517784 /* SwiftLocation in Frameworks */,
 				8FCBEC5E2D6627AE00DAB966 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +172,7 @@
 			);
 			name = Myeline;
 			packageProductDependencies = (
+				8F319FF92D6CB3CF00517784 /* SwiftLocation */,
 			);
 			productName = Myeline;
 			productReference = 8FCBEC442D66258300DAB966 /* Myeline.app */;
@@ -191,6 +196,7 @@
 			);
 			name = LocationActivityExtension;
 			packageProductDependencies = (
+				8F319FFB2D6CB3F400517784 /* SwiftLocation */,
 			);
 			productName = LocationActivityExtension;
 			productReference = 8FCBEC5B2D6627AE00DAB966 /* LocationActivityExtension.appex */;
@@ -223,6 +229,9 @@
 			);
 			mainGroup = 8FCBEC3B2D66258300DAB966;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8F319FF82D6CB35300517784 /* XCRemoteSwiftPackageReference "SwiftLocation" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8FCBEC452D66258300DAB966 /* Products */;
 			projectDirPath = "";
@@ -408,7 +417,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Myeline/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires always location access to update your live activity.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -440,7 +448,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Myeline/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires always location access to update your live activity.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -545,6 +552,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F319FF82D6CB35300517784 /* XCRemoteSwiftPackageReference "SwiftLocation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftLocation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F319FF92D6CB3CF00517784 /* SwiftLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F319FF82D6CB35300517784 /* XCRemoteSwiftPackageReference "SwiftLocation" */;
+			productName = SwiftLocation;
+		};
+		8F319FFB2D6CB3F400517784 /* SwiftLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F319FF82D6CB35300517784 /* XCRemoteSwiftPackageReference "SwiftLocation" */;
+			productName = SwiftLocation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8FCBEC3C2D66258300DAB966 /* Project object */;
 }

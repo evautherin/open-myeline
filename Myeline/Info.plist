@@ -6,7 +6,15 @@
 	<array>
 		<string>location</string>
 	</array>
+	<key>NSSupportsLiveActivities</key>
+	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This app requires location access to update your live activity.</string>
+	<string>NSLocationWhenInUseUsageDescription</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>NSLocationAlwaysAndWhenInUseUsageDescription</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>NSLocationAlwaysUsageDescription</string>
+	<key>NSLocationRequireExplicitServiceSession</key>
+	<true/>
 </dict>
 </plist>

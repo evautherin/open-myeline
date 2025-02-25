@@ -23,6 +23,14 @@ struct ContentView: View {
                 }
             }
             .buttonStyle(.bordered)
+
+//            #if targetEnvironment(simulator)
+//            Button("Background session") {
+//                Task {
+//                    await LiveActivityManager.shared.createAlwaysSession()
+//                }
+//            }
+//            #endif
         }
         .padding()
     }
